@@ -22,16 +22,17 @@ function App(props) {
       return task;
     })
 
-
+    console.log('updated task', updatedTask);
     setTask(updatedTask)
 
   }
 
   const deleteTask = (id) => {
-    const filterdTask = task.filter((task) => { return task.id !== id })
+    console.log('id', id, typeof id)
+    const filterdTask = task.filter((t) => { return t.id !== id })
+    console.log('deleting task', filterdTask)
     setTask(filterdTask)
 
-    console.log(filterdTask)
   }
 
 
